@@ -1,5 +1,11 @@
 # Código Arduino para un emisor BLE de CO2
 
+
+## *En esta primera versión el código esta separado en proyectos diferentes ([beacon](https://github.com/carles2002/arduino/tree/main/beaconArduino) y [medición](https://github.com/carles2002/arduino/tree/main/sketch_sep22a))*
+
+
+
+
 El código Arduino que se muestra a continuación es un emisor BLE de CO2. El emisor se basa en la placa Arduino Nano 33 BLE, que tiene un módulo Bluetooth Low Energy integrado.
 
 
