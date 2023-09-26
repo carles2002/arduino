@@ -37,6 +37,15 @@ public:
 	digitalWrite(numeroLED, HIGH); 
 	encendido = true;
   }
+  void encenderr () {
+    digitalWrite(numeroLED, HIGH); 
+    encendido = true;
+    while(encendido = true){
+      encendido = true;
+    }
+	
+  }
+
 
   // .........................................................
   // .........................................................

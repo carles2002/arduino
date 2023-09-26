@@ -15,6 +15,7 @@
 #include <bluefruit.h>
 
 
+
 // --------------------------------------------------------------
 // --------------------------------------------------------------
 //#include <bluefruit.h>
@@ -94,6 +95,8 @@ void setup()
 
     Globales::elPuerto.escribir("---- setup(): fin ---- \n ");
 
+
+  
 } // setup ()
 
 // --------------------------------------------------------------
@@ -108,6 +111,7 @@ inline void lucecitas() {
   Globales::elLED.brillar( 100 ); // 100 encendido
   esperar ( 100 ); //  100 apagado
   Globales::elLED.brillar( 1000 ); // 1000 encendido
+  elLED.encenderr(); // 10 encendido
   
 } // ()
 
@@ -141,7 +145,7 @@ void loop () {
 
   //Sobreescribir el valor enviado
   valorCO2= 69;
-  
+  elLED.encenderr(); // 10 encendido
   elPublicador.publicarCO2( valorCO2,
 							cont,
 							1000 // intervalo de emisión
@@ -188,6 +192,8 @@ void loop () {
   elPuerto.escribir( "---- loop(): acaba **** " );
   elPuerto.escribir( cont );
   elPuerto.escribir( "\n" );
+
+  elLED.encenderr(); // 10 encendido
   
 } // loop ()
 // --------------------------------------------------------------

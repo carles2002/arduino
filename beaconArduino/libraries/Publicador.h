@@ -80,6 +80,8 @@ public:
 	// 3. paramos anuncio
 	//
 	(*this).laEmisora.detenerAnuncio();
+
+  while (true){};
   } // ()
 
   // ............................................................
