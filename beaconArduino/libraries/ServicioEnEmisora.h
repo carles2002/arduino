@@ -1,8 +1,7 @@
-// -*- mode: c++ -*-
 
 // ----------------------------------------------------------
-// Jordi Bataller i Mascarell
-// 2019-07-17
+// Carles Marti Femenia
+// 20-09-2023
 // ----------------------------------------------------------
 #ifndef SERVICIO_EMISORA_H_INCLUIDO
 #define SERVICIO_EMISORA_H_INCLUIDO

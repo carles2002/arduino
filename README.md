@@ -67,3 +67,24 @@ Instalación
 La función `imprimirDatos()` imprime los datos del emisor en el monitor serie.
 La función `led()` controla el encendido y apagado del led integrado.
 Para obtener más información sobre estas funciones, consulta el código fuente.
+
+## Librerias 
+El codigo hace uso de 6 Librerias:
+
+### LED
+Esta librería se encarga de manejar el uso del led integrado en la placa ESP, permite encenderlo, apagarlo y hacerlo brillar X segundos.
+
+### Medidor
+En esta librería se encuentra todo lo que tiene que ver con **obtener lecturas de los sensores**, en el caso de esta primera versión, no se ha implementado el codigo necesario para hacerlo y simplemente se emulan los valores. (*El código que falta está en el otro proyecto sketch del repositorio*)
+
+### Publicador
+Esta librería se encarga de preparar la **emisora** para su correcto funcionamiento con diferentes configuraciones (Nombre, fabricante, potencia de emision...)y además permite emitir/publicar valores por beacon, como pueden ser un minor y un major o la temperatura y el valor de CO2.
+
+### EmisoraBLE
+En esta librería se implementa el funcionamiento de la emisora Bluetooth, haciendo uso de la libreria de codigo abierto bluefruit y de servicioEnEmisora. Esta permite encender la emisora, enviar datos, apagarla ... 
+
+### PuertoSerie
+Esta librería permite enviar mensajes de texto por el puerto serie para poder ser leidos por otros dispositivos compatibles.
+
+### servicioEnEmisora 
+Aquí es donde se implementa todo lo que permite el envio de datos mediante Bluetooth utilizando bluefruit, permite establecer una comunicacion y enviar caracteres concretos. (*En este caso no se utiliza, ya que solo se requiere el envio de dos [N]*)
