@@ -1,3 +1,9 @@
+
+// --------------------------------------------------------------
+// Carles Marti Femenia
+// 20-09-2023
+// --------------------------------------------------------------
+
 #include <BLEAdvertising.h>
 #include <BLECentral.h>
 #include <BLECharacteristic.h>
@@ -32,7 +38,7 @@ namespace Globales
 
     PuertoSerie elPuerto(/* velocidad = */ 115200); // 115200 o 9600 o ...
 
-    // Serial1 en el ejemplo de Curro creo que es la conexión placa-sensor
+    
 };
 
 
@@ -59,45 +65,37 @@ namespace Globales
 void inicializarPlaquita()
 {
 
-    // de momento nada
+    // Aquí va el codigo para inicializar algún componente necesario del ESP
 
 } // ()
 
+// setup ()
+
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+
+// Creación de las variables globales y de componentes necesarios para la ESP
 void setup()
 {
     Globales::elPuerto.esperarDisponible();
 
-    //
-    //
-    //
+    
     inicializarPlaquita();
 
-    // Suspend Loop() to save power
-    // suspendLoop();
-
-    //
-    //
-    //
+    
+    
     Globales::elPublicador.encenderEmisora();
 
-    // Globales::elPublicador.laEmisora.pruebaEmision();
-
-    //
-    //
-    //
+   
+    
     Globales::elMedidor.iniciarMedidor();
 
-    //
-    //
-    //
+    
     esperar(1000);
 
     Globales::elPuerto.escribir("---- setup(): fin ---- \n ");
 
-} // setup ()
-
-// --------------------------------------------------------------
-// --------------------------------------------------------------
+} 
 inline void lucecitas() {
   using namespace Globales;
 
@@ -131,7 +129,7 @@ void loop () {
   elPuerto.escribir( cont );
   elPuerto.escribir( "\n" );
 
-
+  // Pequeño aviso de luces que indica si se esta ejecutando correctamente
   lucecitas();
 
   // 
@@ -139,7 +137,7 @@ void loop () {
   // 
   int valorCO2 = elMedidor.medirCO2();
 
-  //Sobreescribir el valor enviado
+  //Sobreescribir el valor enviado por el indicado
   valorCO2= 69;
   
   elPublicador.publicarCO2( valorCO2,
@@ -147,36 +145,7 @@ void loop () {
 							1000 // intervalo de emisión
 							);
   
-  // 
-  // mido y publico
-  // 
-
-  /*
-  int valorTemperatura = elMedidor.medirTemperatura();
   
-  elPublicador.publicarTemperatura( valorTemperatura, 
-									cont,
-									1000 // intervalo de emisión
-									);
-*/
-  // 
-  // prueba para emitir un iBeacon y poner
-  // en la carga (21 bytes = uuid 16 major 2 minor 2 txPower 1 )
-  // lo que queramos (sin seguir dicho formato)
-  // 
-  // Al terminar la prueba hay que hacer Publicador::laEmisora privado
-  // 
-  char datos[21] = {
-	'H', 'o', 'l', 'a',
-	'H', 'o', 'l', 'a',
-	'H', 'o', 'l', 'a',
-	'H', 'o', 'l', 'a',
-	'H', 'o', 'l', 'a',
-	'H'
-  };
-
-  // elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 );
-  //elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( "MolaMolaMolaMolaMolaM", 21 );
 
   esperar( 500 );
 

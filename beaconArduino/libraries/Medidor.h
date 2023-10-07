@@ -1,4 +1,8 @@
-// -*- mode: c++ -*-
+
+// --------------------------------------------------------------
+// Carles Marti Femenia
+// 20-09-2023
+// --------------------------------------------------------------
 
 #ifndef MEDIDOR_H_INCLUIDO
 #define MEDIDOR_H_INCLUIDO
@@ -22,19 +26,26 @@ public:
   // .....................................................
   // .....................................................
   void iniciarMedidor() {
-	// las cosas que no se puedan hacer en el constructor, if any
+    // Aquí va la parte del código que se encarga de inicializar
+    // los sensores y de calibrarlos
   } // ()
 
   // .....................................................
   // .....................................................
   int medirCO2() {
-	return 235;
+
+    // Aquí va el codigo del otro proyecto de arduino del mismo repositorio
+    // De momento para esta v0.1 lo dejamos vacío para simplificar
+	return 0;
   } // ()
 
   // .....................................................
   // .....................................................
   int medirTemperatura() {
-	return -12; // qué frío !
+
+    // Aquí va el codigo del otro proyecto de arduino del mismo repositorio
+    // De momento para esta v0.1 lo dejamos vacío para simplificar
+	return 0; 
   } // ()
 	
 }; // class

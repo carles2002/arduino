@@ -1,7 +1,7 @@
-// -*- mode: c++ -*-
 
 // --------------------------------------------------------------
-// Jordi Bataller i Mascarell
+// Carles Marti Femenia
+// 20-09-2023
 // --------------------------------------------------------------
 
 #ifndef PUBLICADOR_H_INCLUIDO
@@ -58,6 +58,8 @@ public:
 
   // ............................................................
   // ............................................................
+  // Publica el valor de CO2 que se le introduce, en este caso en
+  // el setup
   void publicarCO2( int16_t valorCO2, uint8_t contador,
 					long tiempoEspera ) {
 
