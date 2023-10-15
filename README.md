@@ -56,7 +56,7 @@ El código funciona de la siguiente manera:
 La función `setup()` inicializa la placa Arduino y el módulo Bluetooth Low Energy. También crea el servicio BLE y la característica BLE para el valor de CO2.
 La función `loop()` mide el valor de CO2 y lo publica en la característica BLE.
 (*En esta versión inicial no se miden los valores de CO2, estos estan predefinidos en el código*)
-Instalación
+
 
 
 
